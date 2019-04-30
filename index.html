@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--Icon FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="css/animate.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">-->
+
+    <!--FONT PLACAR-->
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+
+    <title>Pedra, Papel, Tesoura</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light" style="background-color: #b38f05">
+        <a class="navbar-brand text-warning" href="#">
+            <i class="fas fa-hand-rock"></i>
+            <i class="fas fa-hand-peace"></i>
+            <i class="fas fa-hand-paper"></i> 
+            Jokenpo
+        </a>
+    </nav> 
+    <div class="container">
+        <h1>Informe sua jogada</h1>
+        <form action="#" onsubmit="return jogar();" method="dialog">
+        <div class="row">
+            <div class="col-md-12">                
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary btn-lg">
+                            <input type="radio" name="ppt" id="option1" value="1" autocomplete="off"> <i class="fas fa-hand-rock fa-4x"></i>
+                        </label>
+                        <label class="btn btn-secondary btn-lg">
+                            <input type="radio" name="ppt" id="option2" value="2" autocomplete="off"> <i class="fas fa-hand-peace fa-4x"></i>
+                        </label>
+                        <label class="btn btn-secondary btn-lg">
+                            <input type="radio" name="ppt" id="option3" value="3" autocomplete="off"> <i class="fas fa-hand-paper fa-4x"></i> 
+                        </label>
+                    </div>                    
+            </div>
+            <div class="col-md-12">
+                <p></p>
+                    <button type="submit" class="btn btn-success"><i class="fas fa-play"></i> Jogar</button>
+            </div>
+        </form>
+
+        
+
+        <div id="jkp" class="col-12 text-center d-none">
+                <h1 class="display-1 animated jello faster infinite">
+                    <span class="text-primary">JO</span>
+                    <span class="text-danger">KEN</span>
+                    <span class="text-warning">PO</span>
+                </h1>
+        </div> 
+                           
+        </div>
+        <br />
+
+        <div id="msgerro" class="alert alert-danger shake animated d-none" role="alert">
+            É necessário escolher uma jogada!
+        </div>
+
+        <div id="resultado" class="row d-none bounceIn animated">
+                
+            <div class="col-md-2 col-4" style="color:#7835dc">
+                    <i class="fas fa-user fa-3x"></i> <i id="escolha" class="fas fa-2x"></i> 
+                    <p>Você</p>
+            </div>
+            <div class="col-md-2 col-4">
+                <i id="resultadoIcone" class="far fa-5x"></i>                
+            </div>
+            <div class="col-md-8 col-4" style="color:#7835dc">
+                <i id="ai" class="fas fa-2x"></i>  <i class="fas fa-desktop fa-3x"></i> 
+                <p>Computador</p>
+            </div>
+            <div class="col-sm-12 col-md-5 text-center">
+                    <span id="msgResultado"></span>
+                    <br />                    
+                    <div style="font-family: 'Bungee Inline', cursive;">
+                        <h1 id="placar"></h1>        
+                    </div>
+                <h3 id="placarFim" class="d-none"></h3>        
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="regra.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
